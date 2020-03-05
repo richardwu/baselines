@@ -340,7 +340,7 @@ class TRPO(ActorCriticRLModel):
 
 
                         vpredbefore = seg["vpred"]  # predicted value function before update
-                        atarg = (atarg - atarg.mean()) / atarg.std()  # standardized advantage function estimate
+                        atarg = (atarg - atarg.mean()) / (atarg.std() or 1.)  # standardized advantage function estimate
 
                         # true_rew is the reward without discount
                         if writer is not None:
