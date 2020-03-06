@@ -70,6 +70,7 @@ Bug Fixes:
 - Fixed ``num_timesteps`` computation to be consistent between algorithms (updated after ``env.step()``)
   Only ``TRPO`` and ``PPO1`` update it differently (after synchronization) because they rely on MPI
 - Fixed bug in ``TRPO`` with NaN standardized advantages (@richardwu)
+- Fixed partial minibatch computation in ExpertDataset (@richardwu)
 
 Deprecations:
 ^^^^^^^^^^^^^
@@ -653,4 +654,4 @@ Thanks to @bjmuld @iambenzo @iandanforth @r7vme @brendenpetersen @huvar @abhiskk
 @XMaster96 @kantneel @Pastafarianist @GerardMaggiolino @PatrickWalter214 @yutingsz @sc420 @Aaahh @billtubbs
 @Miffyli @dwiel @miguelrass @qxcv @jaberkow @eavelardev @ruifeng96150 @pedrohbtp @srivatsankrishnan @evilsocket
 @MarvineGothic @jdossgollin @SyllogismRXS @rusu24edward @jbulow @Antymon @seheevic @justinkterry @edbeeching
-@flodorner @KuKuXia @NeoExtended @solliet @mmcenta
+@flodorner @KuKuXia @NeoExtended @solliet @mmcenta @richardwu
